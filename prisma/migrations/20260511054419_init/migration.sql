@@ -1,29 +1,3 @@
-/*
-  Warnings:
-
-  - The primary key for the `User` table will be changed. If it partially fails, the table could be left without primary key constraint.
-  - You are about to drop the column `age` on the `User` table. All the data in the column will be lost.
-  - You are about to drop the column `isMarried` on the `User` table. All the data in the column will be lost.
-  - You are about to drop the column `nationality` on the `User` table. All the data in the column will be lost.
-
-*/
--- DropIndex
-DROP INDEX "User_email_key";
-
--- AlterTable
-ALTER TABLE "User" DROP CONSTRAINT "User_pkey",
-DROP COLUMN "age",
-DROP COLUMN "isMarried",
-DROP COLUMN "nationality",
-ADD COLUMN     "emailVerified" TIMESTAMP(3),
-ADD COLUMN     "image" TEXT,
-ALTER COLUMN "id" DROP DEFAULT,
-ALTER COLUMN "id" SET DATA TYPE TEXT,
-ALTER COLUMN "name" DROP NOT NULL,
-ALTER COLUMN "email" DROP NOT NULL,
-ADD CONSTRAINT "User_pkey" PRIMARY KEY ("id");
-DROP SEQUENCE "User_id_seq";
-
 -- CreateTable
 CREATE TABLE "Account" (
     "id" TEXT NOT NULL,
@@ -57,6 +31,17 @@ CREATE TABLE "VerificationToken" (
     "identifier" TEXT NOT NULL,
     "token" TEXT NOT NULL,
     "expires" TIMESTAMP(3) NOT NULL
+);
+
+-- CreateTable
+CREATE TABLE "User" (
+    "id" TEXT NOT NULL,
+    "name" TEXT,
+    "email" TEXT,
+    "emailVerified" TIMESTAMP(3),
+    "image" TEXT,
+
+    CONSTRAINT "User_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
