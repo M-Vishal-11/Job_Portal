@@ -1,6 +1,11 @@
+"use client";
+import { logout } from "@/lib/auth";
+import { useSession } from "next-auth/react";
 import Link from "next/link";
 
 export default function Navbar() {
+  const { data: session } = useSession();
+
   return (
     <nav className="w-full border-b bg-white shadow-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
@@ -18,21 +23,37 @@ export default function Navbar() {
             Browse Jobs
           </Link>
 
-          <Link href="/jobs/post" className="transition hover:text-blue-600">
-            Post Jobs
-          </Link>
+          {session ? (
+            <>
+              <Link
+                href="/jobs/post"
+                className="transition hover:text-blue-600"
+              >
+                Post Jobs
+              </Link>
 
-          <Link href="/dashboard" className="transition hover:text-blue-600">
-            Dashboard
-          </Link>
+              <Link
+                href="/dashboard"
+                className="transition hover:text-blue-600"
+              >
+                Dashboard
+              </Link>
 
-          {/* Button */}
-          <Link
-            href="/auth/signin"
-            className="rounded-lg bg-blue-600 px-4 py-2 text-white transition hover:bg-blue-700"
-          >
-            Sign In
-          </Link>
+              <button
+                onClick={logout}
+                className="transition hover:text-blue-600"
+              >
+                Sign Out
+              </button>
+            </>
+          ) : (
+            <Link
+              href="/auth/signin"
+              className="rounded-lg bg-blue-600 px-4 py-2 text-white transition hover:bg-blue-700"
+            >
+              Sign In
+            </Link>
+          )}
         </div>
       </div>
     </nav>
