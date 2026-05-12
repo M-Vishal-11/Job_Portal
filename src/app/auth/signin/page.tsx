@@ -1,3 +1,4 @@
+import { login } from "@/lib/auth";
 import Link from "next/link";
 
 export default function SignInPage() {
@@ -24,7 +25,10 @@ export default function SignInPage() {
 
         {/* Button */}
         <div className="mt-10">
-          <button className="flex w-full items-center justify-center gap-3 rounded-2xl bg-black px-6 py-4 text-lg font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:bg-gray-900 active:scale-[0.98]">
+          <button
+            onClick={login}
+            className="flex w-full items-center justify-center gap-3 rounded-2xl bg-black px-6 py-4 text-lg font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:bg-gray-900 active:scale-[0.98]"
+          >
             {/* GitHub Icon */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
