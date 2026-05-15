@@ -1,4 +1,5 @@
 "use client";
+import axios from "axios";
 import React from "react";
 
 export default function PostJobPage() {
@@ -15,6 +16,14 @@ export default function PostJobPage() {
       salary: formData.get("salary"),
     };
     console.log(data);
+    try {
+      const res = await axios.post("/api/jobs", data);
+      console.log(res);
+
+      window.location.href = "/jobsf";
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   return (
