@@ -27,6 +27,9 @@ https://jobportal102.netlify.app
 * ☁️ Hosted on Netlify
 * 🗄️ PostgreSQL database using Neon
 * 🔄 Real-time database updates with Prisma ORM
+* 🔄 CI/CD deployment pipeline with Netlify
+* 🚀 Automatic production deployment on GitHub push
+* ⚡ Continuous integration and seamless delivery
 
 ---
 
