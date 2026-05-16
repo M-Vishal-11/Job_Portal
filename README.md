@@ -130,7 +130,7 @@ git clone https://github.com/your-username/hireon.git
 Move into the project:
 
 ```bash
-cd hireon
+cd Job_Portal
 ```
 
 Install dependencies:
