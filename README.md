@@ -152,11 +152,20 @@ AUTH_SECRET="your_auth_secret"
 
 GITHUB_ID="your_github_client_id"
 GITHUB_SECRET="your_github_client_secret"
+
+AUTH_URL="http://localhost:3000"
+NEXTAUTH_URL="http://localhost:3000"
 ```
 
 ---
 
 # 🗄️ Prisma Setup
+
+Push schema to database:
+
+```bash
+npx prisma migrate dev --name init
+```
 
 Generate Prisma client:
 
@@ -164,18 +173,12 @@ Generate Prisma client:
 npx prisma generate
 ```
 
-Push schema to database:
-
-```bash
-npx prisma db push
-```
-
 ---
 
 # ▶️ Run Locally
 
 ```bash
-npm run dev
+npm run dev / pnpm dev
 ```
 
 Visit:
