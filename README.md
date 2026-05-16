@@ -112,14 +112,19 @@ View Application in Dashboard
 
 🌐 https://jobportal102.netlify.app
 
-You can also upload screenshots or demo GIFs here later.
 
 Example:
 
-```md
-![Home Page](./screenshots/home.png)
-```
+## 📸 Application Previews
 
+### 🏠 Landing Page
+![Landing Page](public/homePage.png)
+
+### 🔍 Browse Jobs
+![Browse Listings](public/browsePage.png)
+
+### 📊 Developer Dashboard
+![User Dashboard](public/DashboardPage.png)
 ---
 
 # ⚙️ Installation
