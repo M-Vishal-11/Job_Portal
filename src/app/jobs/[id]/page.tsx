@@ -23,7 +23,7 @@ export default async function JobPage({
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-100 via-white to-blue-100 px-4 py-10">
+    <main className="min-h-screen bg-linear-to-br from-slate-100 via-white to-blue-100 px-4 py-10">
       <div className="mx-auto max-w-4xl">
         {/* Back Button */}
         <Link
