@@ -136,7 +136,7 @@ cd Job_Portal
 Install dependencies:
 
 ```bash
-npm install
+npm install / pnpm install
 ```
 
 ---
