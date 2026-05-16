@@ -38,7 +38,7 @@ export async function POST(
       data: {
         jobId: jobId,
         userId: session.user.id,
-        status: "pending",
+        status: "PENDING",
       },
     });
 
