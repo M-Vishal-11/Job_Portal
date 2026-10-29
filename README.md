@@ -242,8 +242,3 @@ prisma/
 
 Built with ❤️ using Next.js, Prisma ORM, and PostgreSQL.
 
----
-
-# 📜 License
-
-This project is licensed under the MIT License.
